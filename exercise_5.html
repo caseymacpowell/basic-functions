@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions! (Five)</title>
+</head>
+<body>
+	<script>
+		var sum = 0;
+		var number = 0;
+
+		function addToAverage(num) {
+			sum = sum + num;
+			number = number + 1;
+		}
+
+		function getAverage() {
+			return sum / number;
+		}
+
+		/*
+			TODO: Using the functions above, compute and print the average of:
+			13, 4, 134, 21, 30
+		*/
+		// Called the addToAverage function with each number so that the global variables sum 
+		// and number would change.
+		//Then I called the getAverage function which utilizes the global variables sum and number.
+		addToAverage(13);
+		addToAverage(4);
+		addToAverage(134);
+		addToAverage(21);
+		addToAverage(30);
+
+		console.log(getAverage());
+
+		/*
+			Optional: Create a function which averages an array of numbers
+			Optional: Create a variadic function which averages all of its arguments
+		*/
+
+		// Array
+		var numbers = [5, 15, 27, 13, 21, 111];
+
+		//Function which averages an array of numbers.
+		var findAverage = function(a){
+			var sum = 0;
+			for(var i = 0; i < a.length; i++){
+				sum += a[i];
+			}
+			var avg = sum / a.length;
+			return avg;
+
+		};
+		console.log(findAverage(numbers));
+
+
+	</script>
+</body>
+</html>
